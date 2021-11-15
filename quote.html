@@ -1,0 +1,479 @@
+<!DOCTYPE html> 
+
+<html> 
+<head>
+<title>Capricorn High School</title> 
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./css/links.css">
+        <script src="./script/jquery-1.11.3.js"></script>
+
+<style> 
+body {font-family: arial;}
+
+h1 {margin-left: 20px;}
+.copy {
+	margin-left: 20px; 
+	margin-right: 10px;
+}
+
+.title {margin-left: 20px;}
+#wrapper {
+ width: 1220px;
+ margin-right: auto;
+ margin-left: auto;
+ 
+ border-color:white;
+}
+header {
+ width: 1200px;
+ height: 100px;
+ margin-top: 10px;
+ margin-left: 10px;
+ border: thin solid;
+ border-color:white;
+ background-color: White;
+ text-align: center;
+}
+ h1{
+ font-size: 70px;
+}
+img.left {
+ float: left;
+ margin-top: 10px;
+ margin-right: 10px;
+}
+ul#navlist {
+ padding: 0;
+margin: 10px 0px 0px 0px;
+ list-style-type: none;
+}
+ul#navlist li{
+ display: inline;
+}
+ul#navlist a{
+ margin-right: 5px;
+ border: solid 1px;
+ background-color: #4682B4;
+ padding: 5px 10px 5px 10px;
+ text-decoration: none;
+ }
+nav {
+ width: 200px;
+ height: 600px;
+ float: left;
+ margin: 20px 14px 0px 10px;
+ text-align: center;
+ border: thin solid;
+  background-color:#4682B4;
+ font-size: 20px;
+}
+article {
+ width: 570px;
+ float: left;
+ margin: 20px 0px 20px 0px;
+ border: thin solid;
+ background-color: #fff;
+ }
+ aside {
+ width: 100px;
+ height: 00px;
+ float: right;
+ margin: 20px 8px 0px 0px;
+ border: solid thin;
+ border-color:white;
+ background-color: white;
+}
+table {
+ font-family: georgia, serif;
+ border: solid 1px black;
+ border-collapse: collapse;
+ width: 100px;
+ height: 10px;
+}
+th, td {
+ border: solid 1px black;
+ padding: 10px;
+}
+th {
+ background-color: #4682B4;
+ color: #0070dd;
+}
+colgroup.leftcol {
+ background-color: #4682B4;
+}
+
+caption {
+ font-family: verdana, sans-serif;
+ padding-bottom: 10px;
+}
+td:hover {
+ background-color: #4682B4;
+}
+
+footer {
+ width: 1400px;
+ height: 75px;
+ clear: both;
+ border: solid thin;
+ margin-left: 10px;
+ margin-bottom: 10px;
+ background-color:#4682B4;
+}
+/* Aside */
+.aside {
+float: right;
+width: 28%;
+padding: 30px 20px;
+border: none;
+}
+
+/* Calendar */
+/* Month header */
+.month {
+  text-align: center;
+  background-color:#4682B4;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month ul li {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+/* Previous button inside month header */
+.month .prevArrow {
+  float: left;
+}
+
+/* Next button */
+.month .nextArrow {
+  float: right;
+}
+
+/*Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.calendertable {
+    width: 100%;
+}
+
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+
+<header>
+<img src="photos/Capricorn-badge.png"  width="180" height="180" class="left">
+<h1>Capricorn High School</h1>
+<ul id="navlist">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="quote.html">Request Quote</a></li>
+ <li><a href="gallery.html">Gallery</a></li>
+ <li><a href="staff.html">Staff</a></li>
+<li><a href="declaration.html">Declaration Form</a></li>
+</ul
+
+</header>
+<nav><h2>Learn More</h2>
+<p><a href="history.html">School History</a></p>
+<p><a href="time.html">School Times</a></p>
+<p><a href="fees.html">School Fees</a></p>
+  <a href="why.html">Why This School?</a>
+</nav>
+
+<article>
+        <h2 style="text-align: center;">Request Quote</h2>
+      <form action="results.html" novalidate="novalidate" 
+            style="border: 2px solid black; border-radius: 4px; padding: 8px;">
+         
+      <div id="inputInfo" class="row">
+         <div class="col title"><span><label for="payment">Payment Options:</label></span></div>
+         <div class="col" id="paymentOption">
+            <input id="annualPayment" name="PaymentOption" type="radio" value="Once-off payment" />
+            <label for="annualPayment">Once-off for the year</label><br>
+            <input id="monthlyPayment" name="PaymentOption" type="radio" value="Monthly payment" />
+            <label for="monthlyPayment">Monthly payment</label>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="numOfChildren">
+                  Number of children:</label></div>
+            <div class="col"><input id="numOfChildren" name="NumberOfChildren" type="number" min="0" required="required" />
+            </div>
+         </div>
+         <div class="row">
+            <input id="schoolFees" name="SchoolFees" type="hidden" />
+            <input id="discount" name="Discount" type="hidden" />
+         </div>
+         <div class="row" id="numOfChildrenError"></div>
+         <div class="row">
+            <div class="col title"><label for="firstName">First name:</label></div>
+            <div class="col"><input id="firstName" name="FirstName"
+                type="text" required="required" /></div>
+         </div>
+         <div class="row" id="firstNameError"></div>
+         <div class="row">
+            <div class="col title"><label for="lastName">Last name:</label></div>
+            <div class="col"><input id="lastName" name="LastName" 
+               type="text" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="streetAddress">Street address:</label></div>
+            <div class="col"><input id="streetAddress" 
+               name="StreetAddress" type="text" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="complexName">Complex name (if applicable):</label></div>
+            <div class="col"><input id="complexName" name="ComplexName" type="text" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="suburb">Suburb:</label></div>
+            <div class="col"><input id="suburb" name="Suburb"
+                type="text" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="town">Town:</label></div>
+            <div class="col"><input id="town" name="Town"
+                type="text" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="postalCode">Postal code:</label></div>
+            <div class="col"><input id="postalCode" name="PostalCode" 
+                     type="number" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title"><label for="phoneNumber">Phone number:</label></div>
+            <div class="col"><input id="phoneNumber" name="PhoneNumber"
+                           type="number" required="required" /></div>
+         </div>
+         <div class="row">
+            <div class="col title">
+               <label for="email">E-mail address:</label></div>
+               <div class="col"><input id="email" name="Email"
+                   type="text" required="required" />
+               </div>
+         </div>
+         <div class="row" id="emailError"></div>
+         <div id="quotationDate" class="row">
+            <div class="col title">
+               <label for="quoteDate">Date of request:</label></div>
+            <div class="col">
+               <select id="quoteDy" name="QuotationDay" required="required">
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+               </select>
+               <select id="quoteMo" name="QuotationMonth" required="required">
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+               </select>
+               <select id="quoteYr" name="QuotationYear" required="required">
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+               </select>
+            </div>
+         </div>
+         <div>
+            <div id="errorMessage"></div>
+         </div>
+      
+      <div style="padding-left: 10%; padding-top: 1%;">
+         <div id="row">
+            <p>Preferred extra mural activities:</p>
+         </div>
+         <div id="row">
+            <input type="checkbox" id="soccer" value="Soccer" name="Activities" />
+            <label for="soccer">Soccer</label>
+            <input type="checkbox" id="golf" value="Golf" name="Activities" />
+            <label for="golf">Golf</label>
+            <input type="checkbox" id="hockey" value="Hockey" name="Activities" />
+            <label for="hockey">Hockey</label>
+            <input type="checkbox" id="rugby" value="Rugby" name="Activities" />
+            <label for="rugby">Rugby</label>
+         </div>
+         <div id="row">
+            <input type="checkbox" id="tennis" value="Tennis" name="Activities" />
+            <label for="tennis">Tennis</label>
+            <input type="checkbox" id="swimming" value="Swimming" name="Activities" />
+            <label for="swimming">Swimming</label>
+            <input type="checkbox" id="cricket" value="Cricket" name="Activities" />
+            <label for="cricket">Cricket</label>
+            <input type="checkbox" id="volleyball" value="Volley ball" name="Activities" />
+            <label for="volleyball">Volley Ball</label>
+         </div>
+      </div>
+      <div class="row" style="padding-top: 5px;"><hr></div>
+      <div id="createAccount" style="padding-left: 1.5%;">
+         <div style="font-weight: bold;padding: 5px;">Create Account.</div>
+         <div class="row">
+            <div class="col title"><label for="username">Username</label></div>
+            <div class="col"><input id="username" name="Username" type="text" required="required"/>
+               </div>
+         </div>
+         <div class="row"><div id="usernameError"></div></div>
+         <div class="row">
+            <div class="col title"><label for="pass1">Password</label></div>
+            <div class="col"><input id="pass1" name="Password1" type="password" equired="required" />
+               </div>
+         </div>
+         <div class="row" id="password1Error"></div>
+         <div class="row">
+            <div class="col title"><label for="pass2">Password (verify)</label></div>
+            <div class="col"><input id="pass2" name="Password2" type="password" equired="required" /></div>
+         </div>
+         <div class="row" id="password2Error"></div>
+         <div class="row" id="createAccError"></div>
+      </div>
+   </div>
+   <div class="row" style="padding-top: 10px;"><hr></div>
+         <div id="buttonContainer" style="text-align: center; padding: 10px">
+            <input type="submit" value="Submit" id="requestQuoteButton" />
+         </div>
+      </form></article>
+   <!-- Aside Calendar -->
+        <aside class="aside">
+            <h3>CALENDAR</h3>
+            <div class="month">
+                <ul>
+                  <li class="prevArrow"><button id="prev">&#10094;</button></li>
+                  <li class="nextArrow"><button id="next">&#10095;</button></li>
+                  <li id="month_year">August<br><span style="font-size:18px;">2021</span></li>
+                </ul>
+              </div>
+             <table class="calendertable">
+                <thead>
+                   <tr class="weekdays">
+                      <th id="weekDy-0"></th>
+                      <th id="weekDy-1"></th>
+                      <th id="weekDy-2"></th>
+                      <th id="weekDy-3"></th>
+                      <th id="weekDy-4"></th>
+                      <th id="weekDy-5"></th>
+                      <th id="weekDy-6"></th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td id="cell-1"></td>
+                      <td id="cell-2"></td>
+                      <td id="cell-3"></td>
+                      <td id="cell-4"></td>
+                      <td id="cell-5"></td>
+                      <td id="cell-6"></td>
+                      <td id="cell-7"></td>
+                   </tr>
+                   <tr>
+                      <td id="cell-8"></td>
+                      <td id="cell-9"></td>
+                      <td id="cell-10"></td>
+                      <td id="cell-11"></td>
+                      <td id="cell-12"></td>
+                      <td id="cell-13"></td>
+                      <td id="cell-14"></td>
+                   </tr>
+                   <tr>
+                      <td id="cell-15"></td>
+                      <td id="cell-16"></td>
+                      <td id="cell-17"></td>
+                      <td id="cell-18"></td>
+                      <td id="cell-19"></td>
+                      <td id="cell-20"></td>
+                      <td id="cell-21"></td>
+                   </tr>
+                   <tr>
+                      <td id="cell-22"></td>
+                      <td id="cell-23"></td>
+                      <td id="cell-24"></td>
+                      <td id="cell-25"></td>
+                      <td id="cell-26"></td>
+                      <td id="cell-27"></td>
+                      <td id="cell-28"></td>
+                   </tr>
+                   <tr>
+                      <td id="cell-29"></td>
+                      <td id="cell-30"></td>
+                      <td id="cell-31"></td>
+                      <td id="cell-32"></td>
+                      <td id="cell-33"></td>
+                      <td id="cell-34"></td>
+                      <td id="cell-35"></td>
+                   </tr>
+                   <tr>
+                      <td id="cell-36"></td>
+                      <td id="cell-37"></td>
+                      <td id="cell-38"></td>
+                      <td id="cell-39"></td>
+                      <td id="cell-40"></td>
+                      <td id="cell-41"></td>
+                      <td id="cell-42"></td>
+                   </tr>
+                </tbody>
+             </table>
+        </aside>
+<footer><p>CAPRICORN HIGH SCHOOL THABO MBEKI ST Pietersburg 0699</p>
+<p>Phone: 015 295 9333</p></footer>
+</div>
+ <script src="./script/calendar.js"></script>
+</body>
+</html>
+

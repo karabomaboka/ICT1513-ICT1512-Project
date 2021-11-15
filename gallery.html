@@ -1,0 +1,302 @@
+<!DOCTYPE html> 
+
+<html> 
+<head>
+<title>Capricorn High School</title> 
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./css/links.css">
+        <script src="./script/jquery-1.11.3.js"></script>
+
+<style> 
+body {font-family: arial;}
+
+h1 {margin-left: 20px;}
+.copy {
+	margin-left: 20px; 
+	margin-right: 10px;
+}
+
+.title {margin-left: 20px;}
+#wrapper {
+ width: 1220px;
+ margin-right: auto;
+ margin-left: auto;
+ 
+ border-color:white;
+}
+header {
+ width: 1200px;
+ height: 100px;
+ margin-top: 10px;
+ margin-left: 10px;
+ border: thin solid;
+ border-color:white;
+ background-color: White;
+ text-align: center;
+}
+ h1{
+ font-size: 70px;
+}
+img.left {
+ float: left;
+ margin-top: 10px;
+ margin-right: 10px;
+}
+ul#navlist {
+ padding: 0;
+margin: 10px 0px 0px 0px;
+ list-style-type: none;
+}
+ul#navlist li{
+ display: inline;
+}
+ul#navlist a{
+ margin-right: 5px;
+ border: solid 1px;
+ background-color: #4682B4;
+ padding: 5px 10px 5px 10px;
+ text-decoration: none;
+ }
+nav {
+ width: 200px;
+ height: 600px;
+ float: left;
+ margin: 20px 14px 0px 10px;
+ text-align: center;
+ border: thin solid;
+  background-color:#4682B4;
+ font-size: 20px;
+}
+article {
+ width: 570px;
+ float: left;
+ margin: 20px 0px 20px 0px;
+ border: thin solid;
+ background-color: #fff;
+ }
+ aside {
+ width: 100px;
+ height: 00px;
+ float: right;
+ margin: 20px 8px 0px 0px;
+ border: solid thin;
+ border-color:white;
+ background-color: white;
+}
+table {
+ font-family: georgia, serif;
+ border: solid 1px black;
+ border-collapse: collapse;
+ width: 100px;
+ height: 10px;
+}
+th, td {
+ border: solid 1px black;
+ padding: 10px;
+}
+th {
+ background-color: #4682B4;
+ color: #0070dd;
+}
+colgroup.leftcol {
+ background-color: #4682B4;
+}
+
+caption {
+ font-family: verdana, sans-serif;
+ padding-bottom: 10px;
+}
+td:hover {
+ background-color: #4682B4;
+}
+
+footer {
+ width: 1400px;
+ height: 75px;
+ clear: both;
+ border: solid thin;
+ margin-left: 10px;
+ margin-bottom: 10px;
+ background-color:#4682B4;
+}
+/* Aside */
+.aside {
+float: right;
+width: 28%;
+padding: 30px 20px;
+border: none;
+}
+
+/* Calendar */
+/* Month header */
+.month {
+  text-align: center;
+  background-color:#4682B4;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month ul li {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+/* Previous button inside month header */
+.month .prevArrow {
+  float: left;
+}
+
+/* Next button */
+.month .nextArrow {
+  float: right;
+}
+
+/*Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.calendertable {
+    width: 100%;
+}
+
+#rightarrow {
+   margin-right: 10%;
+}
+
+#leftarrow {
+   margin-left: 10%;
+}
+
+#leftarrow, #rightarrow {
+   background: blue;
+   color: white;
+   position: absolute;
+   z-index: 30;
+   text-align: center;
+   height: 135px;
+   width: 40px;
+   top: 48.5%;
+   border-radius: 8px 0 8px 0;
+}
+
+article div:hover {
+   cursor: pointer;
+}
+
+#leftarrow {
+   left: 3.5%;
+}
+
+#rightarrow {
+   right: 3.5%;
+}
+
+#leftarrow p, #rightarrow p {
+   position: relative;
+   top: 50%;
+   margin-top: -0.5em;
+}
+
+#leftarrow p:hover, #rightarrow p:hover {
+   color: black;
+}
+
+figure {
+   position: absolute;
+   -webkit-box-shadow: 10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   -moz-box-shadow:    10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   box-shadow:         10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+}
+
+#fig2 {
+   z-index: 10;
+   left: 20%;
+   top: 40%;
+}
+
+#fig3 {
+   z-index: 20;
+   left: 50%;
+   margin-left: -240px;
+   margin-right: -240px;
+   top: 35%;
+}
+
+#fig4 {
+   z-index: 10;
+   right: 20%;
+   top: 40%;
+}
+
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+
+<header>
+<img src="photos/Capricorn-badge.png"  width="180" height="180" class="left">
+<h1>Capricorn High School</h1>
+<ul id="navlist">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="quote.html">Request Quote</a></li>
+ <li><a href="gallery.html">Gallery</a></li>
+ <li><a href="staff.html">Staff</a></li>
+<li><a href="declaration.html">Declaration Form</a></li>
+</ul
+
+</header>
+<nav><h2>Learn More</h2>
+<p><a href="history.html">School History</a></p>
+<p><a href="time.html">School Times</a></p>
+<p><a href="fees.html">School Fees</a></p>
+  <a href="why.html">Why This School?</a>
+</nav>
+
+<article>
+<!-- LEFT ARROW -->
+         <div id="leftarrow">
+            <p>&lt;</p>
+         </div>
+
+         <!-- FIGURES -->
+         <figure id="fig2">
+            <img name="main" width="360" height="202" />
+         </figure>
+         <figure id="fig3">
+            <img width="480" height="270" />
+         </figure>
+         <figure id="fig4">
+            <img width="360" height="202" />
+         </figure>
+
+         <!-- RIGHT ARROW -->
+         <div id="rightarrow">
+            <p>&gt;</p>
+         </div>
+
+</article>
+        </aside>
+<footer><p>CAPRICORN HIGH SCHOOL THABO MBEKI ST Pietersburg 0699</p>
+<p>Phone: 015 295 9333</p></footer>
+</div>
+ <script src="./script/calendar.js"></script>
+  <script src="./script/gallery.js"></script>
+</body>
+</html>
+

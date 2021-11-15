@@ -1,0 +1,79 @@
+
+
+
+/* main content */
+article {
+   height: 170px;
+}
+
+#rightarrow {
+   margin-right: 10%;
+}
+
+#leftarrow {
+   margin-left: 10%;
+}
+
+#leftarrow, #rightarrow {
+   background: burlywood;
+   color: white;
+   position: absolute;
+   z-index: 30;
+   text-align: center;
+   height: 135px;
+   width: 40px;
+   top: 48.5%;
+   border-radius: 8px 0 8px 0;
+}
+
+article div:hover {
+   cursor: pointer;
+}
+
+#leftarrow {
+   left: 3.5%;
+}
+
+#rightarrow {
+   right: 3.5%;
+}
+
+#leftarrow p, #rightarrow p {
+   position: relative;
+   top: 50%;
+   margin-top: -0.5em;
+}
+
+#leftarrow p:hover, #rightarrow p:hover {
+   color: black;
+}
+
+figure {
+   position: absolute;
+   -webkit-box-shadow: 10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   -moz-box-shadow:    10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   box-shadow:         10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+}
+
+#fig2 {
+   z-index: 10;
+   left: 20%;
+   top: 40%;
+}
+
+#fig3 {
+   z-index: 20;
+   left: 50%;
+   margin-left: -240px;
+   margin-right: -240px;
+   top: 35%;
+}
+
+#fig4 {
+   z-index: 10;
+   right: 20%;
+   top: 40%;
+}

@@ -1,0 +1,279 @@
+
+/*style.css*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Links */
+a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000
+}
+
+a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+a:active {
+  text-decoration: none;
+  color: green;
+}
+
+/* Header */
+header {
+  background-color: #f1f1f1;
+}
+
+/* Header 1 */
+.header1 {
+  float: left;
+  width: 17%;
+  height: 120px;
+  text-align: center;
+}
+
+/* Header 2 */
+.header2 {
+  float: left;
+  border: none;
+  width: 83%;
+  height: 120px;
+  padding-top: 6px;
+}
+
+/* Top Navigation */
+/* see links.css */
+
+
+/* Side Navigation */
+.sidenav {
+  padding-top: 40px;
+  float: left;
+  border: 1px;
+  width: 17%;
+}
+
+/* Side Navigation */
+.sidenav a {
+  display: block;
+  /*background-color: inherit;*/
+  color: black;
+  padding: 16px 16px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  background-color: #ddd;
+}
+
+
+/* End of Side Navigation */
+
+/* Article */
+.article {
+  float: left;
+  width: 55%;
+  padding: 30px 25px;
+}
+
+/* Aside */
+.aside {
+float: left;
+width: 28%;
+padding: 30px 20px;
+border: none;
+}
+
+/* Calendar */
+/* Month header */
+.month {
+  text-align: center;
+  background-color: #333;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month ul li {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+/* Previous button inside month header */
+.month .prevArrow {
+  float: left;
+}
+
+/* Next button */
+.month .nextArrow {
+  float: right;
+}
+
+/*Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.calendertable {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+  clear: both;
+  background-color: burlywood;
+  height: 160px;
+  padding: 20px;
+}
+
+span {
+  font-weight: bold;
+}
+/* End of footer */
+
+
+#staff {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #staff td, #staff th {
+    border: 1px solid burlywood;
+    padding: 8px;
+  }
+
+  #staff tr:nth-child(even){background-color: #f2f2f2;}
+
+  #staff tr:hover {background-color: #ddd;}
+
+  #staff th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: burlywood;
+    color: white;
+  }
+
+  input[type=text] {
+    width: 220px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid burlywood;
+    box-sizing: border-box;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  input[type=number] {
+    width: 220px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid burlywood;
+    box-sizing: border-box;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  input[type=password] {
+    width: 220px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid burlywood;
+    box-sizing: border-box;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  select {
+    width: 67px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid burlywood;
+    box-sizing: border-box;
+    margin-top: 6px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  
+     /* Create two equal columns that floats next to each other */
+  .col {
+    float: left;
+    width: 50%;
+    padding-left: 30px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .title {
+     padding-top: 8px;
+     font-weight: normal;
+  }
+  
+  #errorMessage{
+     width: 90%;
+     color: red;
+     font-size: 15px;
+     margin-left: 30px;
+     display: none;
+     border: 2px solid red;
+     background-color: rgba(224, 174, 174, 0.2);
+     padding: 5px;
+     margin-top: 2px;
+  }
+  #createAccError{
+     color: red;
+     font-size: 15px;
+     padding: 10px;
+     margin-left: 30px;
+     display: none;
+  }
+  
+  #numOfChildrenError, #firstNameError, #emailError,
+   #usernameError, #password1Error, #password2Error{
+     color: red;
+     font-size: 15px;
+     display: none;
+     text-align: right;
+     padding: 3px;
+     margin-right: 3%;
+  }

@@ -1,0 +1,28 @@
+
+    .fees {
+        border-collapse: collapse;
+    }
+
+    .fees table {
+        width: 100%;
+        padding: 15px; 
+    }
+
+    .fees th {
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .fees td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .fees tr:nth-child(even){background-color: #f2f2f2;}
+
+    .fees tr:hover {background-color: #ddd;}
+
+    

@@ -1,0 +1,61 @@
+
+
+/* General Styles for Menu  */
+.menuBackground {
+	background:burlywood;
+}
+.dropDownMenu a {
+	color: #f2f2f2;
+}
+.dropDownMenu,
+.dropDownMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.dropDownMenu li {
+	position: relative;
+}
+.dropDownMenu a {
+	padding: 13px 20px;
+	display: block;
+	text-decoration: none;
+}
+.dropDownMenu a:hover {
+	background-color: #555;
+}
+
+.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+/* Level 1 Drop Down */
+.dropDownMenu > li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: -4px; /* solve the 4 pixels spacing between list-items */
+}
+.dropDownMenu > li:first-child {
+	margin-left: 0;
+}
+
+/* Level 2 */
+.dropDownMenu ul {
+	box-shadow: 2px 2px 15px 0 rgba(0,0,0, 0.5);
+	color: black;
+}
+.dropDownMenu > li > ul a {
+	color: black;
+}
+
+.dropDownMenu > li > ul {
+	text-align: left;
+	display: none;
+	background-color: #f2f2f2;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 240px;
+	z-index: 999999; /* if you have YouTube iframes, is good to have a bigger z-index so the video can appear above the video */
+}
